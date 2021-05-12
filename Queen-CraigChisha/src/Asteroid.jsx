@@ -2,11 +2,14 @@ import React from 'react'
 
 function Asteroid() {
 
-    const [astLocation, setAstLocation] = React.useState(null)
+    const [distanceFromTop, setDistanceFromTop] = React.useState(0)
 
-    function createAsteroid() {
-        
-    }
+    React.useEffect(() => {
+        const moveInterval = setInterval(() => {
+            setDistanceFromTop(distanceFromTop => distanceFromTop + 1)
+        }, 50);
+        return () => clearInterval(moveInterval)
+    }, []);
 
     //asteroid appears as a div
     //asteroid dropping down - Need a function to delete the div itself
@@ -17,8 +20,8 @@ function Asteroid() {
     const mouseCollision = (event) => event.target.remove();
 
     return (
-        
-        <div onMouseEnter={mouseCollision} className="Asteroid">
+
+        <div onMouseEnter={mouseCollision} className="Asteroid" style={{transform: 'translateY(' + distanceFromTop + 'px)'}}>
 
         </div>
     )
