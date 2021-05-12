@@ -11,3 +11,14 @@
   transform: translateY(0px);
 }
 
+images {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+
+userImage {
+  height: 30px;
+  width: 30px;
+}

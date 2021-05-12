@@ -4,6 +4,7 @@ import Profile from './Profile.jsx'
 import SearchUser from './SearchUser.jsx'
 import Asteroid from './Asteroid.jsx'
 import './App.css'
+import images from "../FaCLogo.png";
 
 function App() {
   const [username, setUsername] = React.useState('')
