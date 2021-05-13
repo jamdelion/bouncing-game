@@ -1,9 +1,7 @@
 import React from 'react'
-import { Asteroid } from './Asteroid.jsx'
+import Fetch from './Fetch'
 
-function GameScreen({score, setScore}) {
-
-    const asteroids = Array.from({length:10}, () => <Asteroid setScore={setScore}/>)
+function GameScreen({score, setScore, name, profileData, setProfileData, gameStart}) {
 
     // React.useEffect(() => {
     //     setGameScore((gameScore) => gameScore+1)
@@ -11,10 +9,11 @@ function GameScreen({score, setScore}) {
 
     return (
     <>
-    {asteroids}
+    {gameStart ? <Fetch setScore={setScore} name={name} profileData={profileData} setProfileData={setProfileData} gameStart={gameStart}/> : null}
     <h2>Score: {score}</h2>
     </>
     )
+
 }
 
 export default GameScreen

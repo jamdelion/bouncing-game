@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
-import Profile from './Profile.jsx'
 import SearchUser from './SearchUser.jsx'
 import GameScreen from './GameScreen.jsx'
 import './App.css'
@@ -14,18 +13,18 @@ import './App.css'
 
 
 function App() {
-  const [username, setUsername] = React.useState('')
+  const [username, setUsername] = React.useState('tiarama')
   const [score, setScore] = React.useState(0)
-  const [gameRunning, toggleGameRunning] = React.useState('')
+  const [gameStart, setGameStart] = React.useState(false)
+  const [profileData, setProfileData] = React.useState('')
 
   return (  
     <div className="App" id="appRoot">
       <main>
-        <SearchUser username={username} setUsername={setUsername}/>
+        <SearchUser username={username} setUsername={setUsername} setProfileData={setProfileData} setGameStart={setGameStart} />
       <div>
-        <Profile name={username}/>
       </div>
-      <GameScreen score={score} setScore={setScore}/>
+      <GameScreen score={score} setScore={setScore} name={username} profileData={profileData} setProfileData={setProfileData} gameStart={gameStart}/>
     </main>
     </div>
   )

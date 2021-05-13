@@ -3,7 +3,14 @@ import FaCLogo from './Images/FaCLogo.png'
 
 let score = 0
 
-function Asteroid({setScore}) {
+function Asteroid({setScore, name, image}) {
+
+
+
+
+      
+    
+// Falling Asteriods 
     const [distanceFromTop, setDistanceFromTop] = React.useState(-10)
     const [speed, setSpeed] = React.useState(Math.random()*5+5)
     const [distanceFromLeft, setDistanceFromLeft] = React.useState(Math.random()*100)
@@ -15,17 +22,28 @@ function Asteroid({setScore}) {
         return () => clearInterval(moveInterval)
     }, [speed]);
 
+// Mouse Collision
     const mouseCollision = () => {
         setDistanceFromTop(() => -10);
         setDistanceFromLeft(() => Math.random()*100);
         setSpeed((speed) => speed+10);
         setScore((score) => score+1)
-        console.log(score)
     }
 
+//If user has avatar image 
+if (!name) {
     return (
-    <img src={FaCLogo} alt='FaC Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
+        <img src="jyfuvyf" alt='default Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
     )
+  } else {
+   return (
+
+  <img src={image} alt='user Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
+  )
+  }
+
+
+   
 }
 
 
