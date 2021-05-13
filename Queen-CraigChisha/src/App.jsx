@@ -15,8 +15,8 @@ import './App.css'
 
 function App() {
   const [username, setUsername] = React.useState('')
+  const [score, setScore] = React.useState(0)
   const [gameRunning, toggleGameRunning] = React.useState('')
-  const [health, setHealth] = useState(3)
 
   return (  
     <div className="App" id="appRoot">
@@ -25,7 +25,7 @@ function App() {
       <div>
         <Profile name={username}/>
       </div>
-      <GameScreen />
+      <GameScreen score={score} setScore={setScore}/>
     </main>
     </div>
   )
