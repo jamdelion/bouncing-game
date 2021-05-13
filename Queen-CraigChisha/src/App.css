@@ -5,9 +5,13 @@
 }
 
 .Asteroid {
-  height: 50px;
-  width: 50px;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  height: 5vw;
+  width: 5vw;
   background-color: green;
-  transform: translateY(0px);
+  transition: transform 1.01s linear;
 }
 

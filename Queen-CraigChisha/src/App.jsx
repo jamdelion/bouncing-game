@@ -2,16 +2,13 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import Profile from './Profile.jsx'
 import SearchUser from './SearchUser.jsx'
-import Asteroid from './Asteroid.jsx'
+import GameScreen from './GameScreen.jsx'
 import './App.css'
 
 function App() {
   const [username, setUsername] = React.useState('')
-  const [gameRunning, toggleGameRunning] = React.useState('')
-  const [health, setHealth] = useState(3)
-  function asteroidCreate() {
-    setInterval(ReactDOM.render(<Asteroid/>, document.getElementById('appRoot')), 1000);
-  }
+  // const [gameRunning, toggleGameRunning] = React.useState('')
+
   return (  
     <div className="App" id="appRoot">
       <main>
@@ -19,7 +16,7 @@ function App() {
       <div>
         <Profile name={username}/>
       </div>
-      <Asteroid />
+      <GameScreen />
     </main>
     </div>
   )
