@@ -4,12 +4,21 @@ import Profile from './Profile.jsx'
 import SearchUser from './SearchUser.jsx'
 import Asteroid from './Asteroid.jsx'
 import './App.css'
-import images from "../FaCLogo.png";
+
+// Importing asteroid images 
+// import FaCLogo from "./Images/FaCLogo.png";
+// import GitHubLogo from "./Images/GitHubLogo.jpg";
+// import HerokuLogo from "./Images/HerokuLogo.png";
+// import ReactLogo from "./Images/ReactLogo.png";
+
+
 
 function App() {
   const [username, setUsername] = React.useState('')
   const [gameRunning, toggleGameRunning] = React.useState('')
   const [health, setHealth] = useState(3)
+
+
   function asteroidCreate() {
     setInterval(ReactDOM.render(<Asteroid/>, document.getElementById('appRoot')), 1000);
   }
