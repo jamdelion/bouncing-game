@@ -27,6 +27,12 @@ main {
   margin: 5vh 0 0 0;
 }
 
+button {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .Asteroid {
   position: fixed;
   z-index: 5;

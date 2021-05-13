@@ -1,5 +1,5 @@
 import React from 'react'
-import FaCLogo from './Images/FaCLogo.png'
+import faCLogo from './FaCLogo.png'
 
 let score = 0
 
@@ -33,7 +33,7 @@ function Asteroid({setScore, name, image}) {
 //If user has avatar image 
 if (!name) {
     return (
-        <img src="jyfuvyf" alt='default Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
+        <img src={faCLogo} alt='default Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
     )
   } else {
    return (
