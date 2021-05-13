@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import SearchUser from './SearchUser.jsx'
 import GameScreen from './GameScreen.jsx'
+import queenLogo from './queen-logo.png'
 import './App.css'
 
 // Importing asteroid images 
@@ -20,6 +21,7 @@ function App() {
 
   return (  
     <div className="App" id="appRoot">
+      <img className="logo" src={queenLogo} />
       <main>
         <SearchUser username={username} setUsername={setUsername} setProfileData={setProfileData} setGameStart={setGameStart} />
       <div>

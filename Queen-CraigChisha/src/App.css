@@ -1,7 +1,30 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  background-image: url('queen-bg.jpg');
+}
+
 .App {
   display: flex;
   justify-content: center;
   text-align: center;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  height: 300px;
+  opacity: 0.6;
+  top: 20%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.search-user {
+  margin: 5vh 0 0 0;
 }
 
 .Asteroid {
@@ -15,32 +38,11 @@
   border-radius: 50%;
 }
 
-/* Sizing faCLogo image same size 
-.faCLogo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  transform: translateY(0px);
-  position: relative;
-  animation-name: faCLogo;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-} */
-/* 
-@keyframes faCLogo{
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: 20px;
-  }
-  50% {
-    top: 180px;
-  }
-  100%{
-    top: 50px;
-  }
-} */
+.score {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10%;
+}
 
 /* Sizing user image  */
 userImage {
