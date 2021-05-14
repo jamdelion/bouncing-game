@@ -1,5 +1,5 @@
 import React from 'react'
-import faCLogo from './Images/FaCLogo.png'
+import faCLogo from '../Images/FaCLogo.png'
 
 let score = 0
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
-import SearchUser from './SearchUser.jsx'
-import GameScreen from './GameScreen.jsx'
+import SearchUser from './Components/SearchUser.jsx'
+import GameScreen from './Components/GameScreen.jsx'
 import queenLogo from './Images/queen-logo.png'
-import './App.css'
+import './Styles/App.css'
 
 // Importing asteroid images 
 // import FaCLogo from "./Images/FaCLogo.png";
