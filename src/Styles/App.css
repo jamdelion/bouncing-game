@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   margin: 0;
-  background-image: url('Images/queen-bg.jpg');
+  background-image: url('../Images/queen-bg.jpg');
 }
 
 .App {
@@ -36,7 +36,7 @@ button {
 .Asteroid {
   position: fixed;
   z-index: 5;
-  top: 0;
+  top: -15%;
   left: 0;
   height: 10vw;
   width: 10vw;
@@ -45,7 +45,7 @@ button {
 }
 
 .score {
-  font-size: 2rem;
+  font-size: 3rem;
   position: absolute;
   bottom: 10%;
 }
