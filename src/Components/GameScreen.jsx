@@ -10,7 +10,7 @@ function GameScreen({score, setScore, name, profileData, setProfileData, gameSta
     return (
     <>
     {gameStart ? <Fetch setScore={setScore} name={name} profileData={profileData} setProfileData={setProfileData} gameStart={gameStart}/> : null}
-    <h2 className="score">Score: <u>{score}</u></h2>
+    <h2 className="score">Score: <span className="score-number" ><u>{score}</u></span></h2>
     </>
     )
 

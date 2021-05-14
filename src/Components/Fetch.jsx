@@ -9,7 +9,7 @@ export default function Fetch({setScore, name, profileData, setProfileData, game
         fetch(USER_URL + name)
           .then((res) => res.json())
           .then((data) => setProfileData(data));
-      }, [gameStart]);
+      }, [gameStart, name]);
       
       const asteroids = Array.from({length:10}, () => <Asteroid setScore={setScore} name={name} profileData={profileData} image={profileData.avatar_url}/>)
       
