@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom';
 import SearchUser from './SearchUser.jsx'
 import GameScreen from './GameScreen.jsx'
-import queenLogo from './queen-logo.png'
+import queenLogo from './Images/queen-logo.png'
 import './App.css'
 
 // Importing asteroid images 
