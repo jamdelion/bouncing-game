@@ -30,7 +30,9 @@ main {
 button {
   font-family: 'Inconsolata', monospace;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+  background-color: black;
 }
 
 .Asteroid {
@@ -48,6 +50,11 @@ button {
   font-size: 3rem;
   position: absolute;
   bottom: 10%;
+}
+
+.score-number {
+  font-size: 4rem;
+  -webkit-text-stroke: 2px black;
 }
 
 /* Sizing user image  */
