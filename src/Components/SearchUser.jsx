@@ -8,7 +8,7 @@ function SearchUser(props) {
             props.setGameStart(true)
             props.setUsername(event.target.username.value)
         }}>
-            <input type="search" placeholder="Github Username" name="username"></input>
+            <input type="search"   aria-label="search Github Username" placeholder="Github Username" name="username"></input>
             <button><b>START</b></button>
         </form>
     );
