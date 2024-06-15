@@ -1,7 +1,14 @@
 html {
   box-sizing: border-box;
   margin: 0;
-  background-image: url('../Images/queen-bg.jpg');
+}
+
+.sky {
+  width: 100vw;
+  height: 100%;
+  background-size: auto 100%;
+  background-image: url("../Images/clouds.jpg");
+  position: fixed;
 }
 
 .App {
@@ -14,7 +21,7 @@ html {
 .logo {
   position: absolute;
   height: 300px;
-  opacity: 0.6;
+  opacity: 0.8;
   top: 20%;
 }
 
@@ -28,11 +35,15 @@ main {
 }
 
 button {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 700;
   font-size: 1.2rem;
   color: aliceblue;
   background-color: black;
+  z-index: 1;
+  height: fit-content;
+  position: absolute;
+  bottom: 10%;
 }
 
 .Asteroid {

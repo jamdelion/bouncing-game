@@ -1,36 +1,26 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom';
-import SearchUser from './Components/SearchUser.jsx'
-import GameScreen from './Components/GameScreen.jsx'
-import queenLogo from './Images/queen-logo.png'
-import './Styles/App.css'
-
-// Importing asteroid images 
-// import FaCLogo from "./Images/FaCLogo.png";
-// import GitHubLogo from "./Images/GitHubLogo.jpg";
-// import HerokuLogo from "./Images/HerokuLogo.png";
-// import ReactLogo from "./Images/ReactLogo.png";
-
-
+import React, { useState } from "react";
+import GameScreen from "./Components/GameScreen.jsx";
+import mollyLogo from "./Images/Molly-logo.png";
+import "./Styles/App.css";
 
 function App() {
-  const [username, setUsername] = React.useState('tiarama')
-  const [score, setScore] = React.useState(0)
-  const [gameStart, setGameStart] = React.useState(false)
-  const [profileData, setProfileData] = React.useState('')
+  const [score, setScore] = useState(0);
 
-  return (  
+  const handleReset = () => {
+    setScore(0);
+    resetBlobs();
+  };
+
+  return (
     <div className="App" id="appRoot">
-      <img className="logo" src={queenLogo} />
+      <div className="sky" />
+      <img className="logo" src={mollyLogo} />
       <main>
-        <SearchUser username={username} setUsername={setUsername} setProfileData={setProfileData} setGameStart={setGameStart} />
-      <div>
-      </div>
-      <GameScreen score={score} setScore={setScore} name={username} profileData={profileData} setProfileData={setProfileData} gameStart={gameStart}/>
-    </main>
+        <GameScreen score={score} setScore={setScore} />
+        <button onClick={handleReset}>Reset</button>
+      </main>
     </div>
-  )
+  );
 }
 
-
-export default App
+export default App;

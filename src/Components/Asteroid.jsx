@@ -1,46 +1,38 @@
-import React from 'react'
-import faCLogo from '../Images/FaCLogo.png'
+import { useState, useEffect } from "react";
+import React from "react";
 
-let score = 0
+const score = 0;
 
-function Asteroid({setScore, name, image}) {    
-    
-// Falling Asteriods 
-    const [distanceFromTop, setDistanceFromTop] = React.useState(-10)
-    const [speed, setSpeed] = React.useState(Math.random()*5+5)
-    const [distanceFromLeft, setDistanceFromLeft] = React.useState(Math.random()*100)
+function Asteroid({ setScore, name, image }) {
+  const [distanceFromTop, setDistanceFromTop] = useState(-10);
+  const [speed, setSpeed] = useState(Math.random() * 5 + 5);
+  const [distanceFromLeft, setDistanceFromLeft] = useState(Math.random() * 100);
 
-    React.useEffect(() => {
-        const moveInterval = setInterval(() => {
-            setDistanceFromTop(distanceFromTop => distanceFromTop + speed)
-        }, 1000);
-        return () => clearInterval(moveInterval)
-    }, [speed]);
+  useEffect(() => {
+    const moveInterval = setInterval(() => {
+      setDistanceFromTop((distanceFromTop) => distanceFromTop + speed);
+    }, 1000);
+    return () => clearInterval(moveInterval);
+  }, [speed]);
 
-// Mouse Collision changes objects
-    const mouseCollision = () => {
-        setDistanceFromTop(() => -10);
-        setDistanceFromLeft(() => Math.random()*100);
-        setSpeed((speed) => speed+10);
-        setScore((score) => score+1)
-    }
+  const mouseCollision = () => {
+    setDistanceFromTop(() => -10);
+    setDistanceFromLeft(() => Math.random() * 100);
+    setSpeed((speed) => speed + 10);
+    setScore((score) => score + 1);
+  };
 
-//If user does not has avatar image use default FaC logo image  
-if (!name) {
-    return (
-        <img src={faCLogo} alt='default Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
-    )
-  } else {
-   return (
-
-  <img src={image} alt='user Logo' onMouseEnter={mouseCollision} className="Asteroid" style={{transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`}}/>
-  )
-  }
-   
+  return (
+    <img
+      src={image}
+      alt="user Logo"
+      onMouseEnter={mouseCollision}
+      className="Asteroid"
+      style={{
+        transform: `translate(${distanceFromLeft}vw, ${distanceFromTop}vh)`,
+      }}
+    />
+  );
 }
 
-
-export { Asteroid, score }
-
-
-
+export { Asteroid, score };
