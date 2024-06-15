@@ -16,8 +16,8 @@ function Asteroid({ setScore, name, image }) {
   }, [speed]);
 
   const mouseCollision = () => {
-    setDistanceFromTop(() => -10);
-    setDistanceFromLeft(() => Math.random() * 100);
+    setDistanceFromTop(-10);
+    setDistanceFromLeft(Math.random() * 100);
     setSpeed((speed) => speed + 10);
     setScore((score) => score + 1);
   };
